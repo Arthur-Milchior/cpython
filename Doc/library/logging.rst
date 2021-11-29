@@ -63,7 +63,7 @@ loggers with names of ``foo.bar``, ``foo.bar.baz``, and ``foo.bam`` are all
 descendants of ``foo``.  The logger name hierarchy is analogous to the Python
 package hierarchy, and identical to it if you organise your loggers on a
 per-module basis using the recommended construction
-``logging.getLogger(__name__)``.  That's because in a module, ``__name__``
+``logging.getLogger(__name__)``.  That's because in a module, :meth:`__name__`
 is the module's name in the Python package namespace.
 
 
@@ -147,7 +147,7 @@ is the module's name in the Python package namespace.
       Returns a logger which is a descendant to this logger, as determined by the suffix.
       Thus, ``logging.getLogger('abc').getChild('def.ghi')`` would return the same
       logger as would be returned by ``logging.getLogger('abc.def.ghi')``. This is a
-      convenience method, useful when the parent logger is named using e.g. ``__name__``
+      convenience method, useful when the parent logger is named using e.g. :meth:`__name__`
       rather than a literal string.
 
       .. versionadded:: 3.2

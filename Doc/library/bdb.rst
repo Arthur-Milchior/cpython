@@ -86,7 +86,7 @@ The :mod:`bdb` module also defines two classes:
    module name patterns.  The debugger will not step into frames that
    originate in a module that matches one of these patterns. Whether a
    frame is considered to originate in a certain module is determined
-   by the ``__name__`` in the frame globals.
+   by the :meth:`__name__` in the frame globals.
 
    .. versionadded:: 3.1
       The *skip* argument.

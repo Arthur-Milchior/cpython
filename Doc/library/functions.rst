@@ -268,7 +268,7 @@ are always available.  They are listed here in alphabetical order.
 
    .. versionchanged:: 3.10
       Class methods now inherit the method attributes (``__module__``,
-      ``__name__``, ``__qualname__``, ``__doc__`` and ``__annotations__``) and
+      :meth:`__name__`, ``__qualname__``, ``__doc__`` and ``__annotations__``) and
       have a new ``__wrapped__`` attribute.
 
 .. function:: compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
@@ -1641,7 +1641,7 @@ are always available.  They are listed here in alphabetical order.
 
    .. versionchanged:: 3.10
       Static methods now inherit the method attributes (``__module__``,
-      ``__name__``, ``__qualname__``, ``__doc__`` and ``__annotations__``),
+      :meth:`__name__`, ``__qualname__``, ``__doc__`` and ``__annotations__``),
       have a new ``__wrapped__`` attribute, and are now callable as regular
       functions.
 

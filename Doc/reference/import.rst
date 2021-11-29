@@ -543,7 +543,7 @@ the module.
 
 .. attribute:: __name__
 
-   The ``__name__`` attribute must be set to the fully-qualified name of
+   The :meth:`__name__` attribute must be set to the fully-qualified name of
    the module.  This name is used to uniquely identify the module in
    the import system.
 
@@ -557,14 +557,14 @@ the module.
 .. attribute:: __package__
 
    The module's ``__package__`` attribute must be set.  Its value must
-   be a string, but it can be the same value as its ``__name__``.  When
+   be a string, but it can be the same value as its :meth:`__name__`.  When
    the module is a package, its ``__package__`` value should be set to
-   its ``__name__``.  When the module is not a package, ``__package__``
+   its :meth:`__name__`.  When the module is not a package, ``__package__``
    should be set to the empty string for top-level modules, or for
    submodules, to the parent package's name.  See :pep:`366` for further
    details.
 
-   This attribute is used instead of ``__name__`` to calculate explicit
+   This attribute is used instead of :meth:`__name__` to calculate explicit
    relative imports for main modules, as defined in :pep:`366`. It is
    expected to have the same value as ``__spec__.parent``.
 
@@ -675,7 +675,7 @@ Here are the exact rules used:
  * If the module has no ``__file__`` but does have a ``__loader__`` that is not
    ``None``, then the loader's repr is used as part of the module's repr.
 
- * Otherwise, just use the module's ``__name__`` in the repr.
+ * Otherwise, just use the module's :meth:`__name__` in the repr.
 
 .. versionchanged:: 3.4
    Use of :meth:`loader.module_repr() <importlib.abc.Loader.module_repr>`
@@ -1060,7 +1060,7 @@ alternative to :meth:`find_module`.
 explicit relative imports in main modules.
 
 :pep:`328` introduced absolute and explicit relative imports and initially
-proposed ``__name__`` for semantics :pep:`366` would eventually specify for
+proposed :meth:`__name__` for semantics :pep:`366` would eventually specify for
 ``__package__``.
 
 :pep:`338` defines executing modules as scripts.

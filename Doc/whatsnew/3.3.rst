@@ -551,7 +551,7 @@ PEP 3155: Qualified name for classes and functions
 
 Functions and class objects have a new ``__qualname__`` attribute representing
 the "path" from the module top-level to their definition.  For global functions
-and classes, this is the same as ``__name__``.  For other functions and classes,
+and classes, this is the same as :meth:`__name__`.  For other functions and classes,
 it provides better information about where they were actually defined, and
 how they might be accessible from the global scope.
 

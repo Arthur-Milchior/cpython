@@ -596,7 +596,7 @@ The :mod:`functools` module defines the following functions:
    attributes of the wrapper function are updated with the corresponding attributes
    from the original function. The default values for these arguments are the
    module level constants ``WRAPPER_ASSIGNMENTS`` (which assigns to the wrapper
-   function's ``__module__``, ``__name__``, ``__qualname__``, ``__annotations__``
+   function's ``__module__``, :meth:`__name__`, ``__qualname__``, ``__annotations__``
    and ``__doc__``, the documentation string) and ``WRAPPER_UPDATES`` (which
    updates the wrapper function's ``__dict__``, i.e. the instance dictionary).
 

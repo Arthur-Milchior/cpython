@@ -419,7 +419,7 @@ The :mod:`test.support` module defines the following functions:
 
    Raise :exc:`ResourceDenied` if *resource* is not available. *msg* is the
    argument to :exc:`ResourceDenied` if it is raised. Always returns
-   ``True`` if called by a function whose ``__name__`` is ``'__main__'``.
+   ``True`` if called by a function whose :meth:`__name__` is ``'__main__'``.
    Used when tests are executed by :mod:`test.regrtest`.
 
 

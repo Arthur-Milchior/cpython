@@ -250,7 +250,7 @@ attributes:
 
    Add ``__qualname__`` and ``gi_yieldfrom`` attributes to generators.
 
-   The ``__name__`` attribute of generators is now set from the function
+   The :meth:`__name__` attribute of generators is now set from the function
    name, instead of the code name, and it can now be modified.
 
 .. versionchanged:: 3.7

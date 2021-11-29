@@ -49,13 +49,13 @@ The :mod:`runpy` module provides two functions:
    below are defined in the supplied dictionary, those definitions are
    overridden by :func:`run_module`.
 
-   The special global variables ``__name__``, ``__spec__``, ``__file__``,
+   The special global variables :meth:`__name__`, ``__spec__``, ``__file__``,
    ``__cached__``, ``__loader__`` and ``__package__`` are set in the globals
    dictionary before the module code is executed (Note that this is a
    minimal set of variables - other variables may be set implicitly as an
    interpreter implementation detail).
 
-   ``__name__`` is set to *run_name* if this optional argument is not
+   :meth:`__name__` is set to *run_name* if this optional argument is not
    :const:`None`, to ``mod_name + '.__main__'`` if the named module is a
    package and to the *mod_name* argument otherwise.
 
@@ -118,13 +118,13 @@ The :mod:`runpy` module provides two functions:
    below are defined in the supplied dictionary, those definitions are
    overridden by :func:`run_path`.
 
-   The special global variables ``__name__``, ``__spec__``, ``__file__``,
+   The special global variables :meth:`__name__`, ``__spec__``, ``__file__``,
    ``__cached__``, ``__loader__`` and ``__package__`` are set in the globals
    dictionary before the module code is executed (Note that this is a
    minimal set of variables - other variables may be set implicitly as an
    interpreter implementation detail).
 
-   ``__name__`` is set to *run_name* if this optional argument is not
+   :meth:`__name__` is set to *run_name* if this optional argument is not
    :const:`None` and to ``'<run_path>'`` otherwise.
 
    If the supplied path directly references a script file (whether as source

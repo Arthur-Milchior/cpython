@@ -41,6 +41,6 @@ than explicitly calling :c:func:`PyGen_New` or :c:func:`PyGen_NewWithQualName`.
 .. c:function:: PyObject* PyGen_NewWithQualName(PyFrameObject *frame, PyObject *name, PyObject *qualname)
 
    Create and return a new generator object based on the *frame* object,
-   with ``__name__`` and ``__qualname__`` set to *name* and *qualname*.
+   with :meth:`__name__` and ``__qualname__`` set to *name* and *qualname*.
    A reference to *frame* is stolen by this function.  The *frame* argument
    must not be ``NULL``.

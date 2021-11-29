@@ -2282,7 +2282,7 @@ Changes in the Python API
   desired then you will need to set these attributes manually. You can use
   :func:`importlib.util.module_to_load` for module management.
 
-* Import now resets relevant attributes (e.g. ``__name__``, ``__loader__``,
+* Import now resets relevant attributes (e.g. :meth:`__name__`, ``__loader__``,
   ``__package__``, ``__file__``, ``__cached__``) unconditionally when reloading.
   Note that this restores a pre-3.3 behavior in that it means a module is
   re-found when re-loaded (:issue:`19413`).
