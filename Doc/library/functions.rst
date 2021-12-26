@@ -1694,10 +1694,15 @@ are always available.  They are listed here in alphabetical order.
    attribute is dynamic and can change whenever the inheritance hierarchy is
    updated.
 
-   If the second argument is omitted, the super object returned is unbound.  If
-   the second argument is an object, ``isinstance(obj, type)`` must be true.  If
-   the second argument is a type, ``issubclass(type2, type)`` must be true (this
-   is useful for classmethods).
+   If the second argument is an object, ``isinstance(obj, type)`` must be true.
+   If the second argument is a type, ``issubclass(type2, type)`` must be true
+   (this is useful for :func:`classmethods <classmethod>`).  If the second
+   argument is omitted, the super object is unbound. That mean that, for an
+   object ``c`` of class ``C``, with ``C.s = super(type)``, then ``c.s.m(args)``
+   is equivalent to ``super(type, c).m(args)``. The use of :func:`super` with a
+   single argument should be avoided in favour of using zero or two arguments.
+   The concept of unbound method was otherwise removed from the Python language
+   in Python 3.0.
 
    There are two typical use cases for *super*.  In a class hierarchy with
    single inheritance, *super* can be used to refer to parent classes without
